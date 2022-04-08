@@ -49,12 +49,16 @@ const SignupForm = () => {
       </div>
       <div className="flex justify-between">
         <Input
+          height="h-9"
+          color="bg-grey"
           type="text"
           placeholder="Legal First Name"
           margintop="mt-3"
           width=" w-28 md:w-36 2xl:w-56"
         ></Input>
         <Input
+          height="h-9"
+          color="bg-grey"
           type="text"
           placeholder="Last Name"
           margintop="mt-3"
@@ -62,24 +66,32 @@ const SignupForm = () => {
         ></Input>
       </div>
       <Input
+        height="h-9"
+        color="bg-grey"
         type="text"
         placeholder="Other Names"
         margintop="mt-3"
         width="w-full"
       ></Input>
       <Input
+        height="h-9"
+        color="bg-grey"
         type="text"
         placeholder="Email Address"
         margintop="mt-3"
         width="w-full"
       ></Input>
       <Input
+        height="h-9"
+        color="bg-grey"
         type="text"
         placeholder="Phone Number"
         margintop="mt-3"
         width="w-full"
       ></Input>
       <Input
+        height="h-9"
+        color="bg-grey"
         type="password"
         placeholder="Password"
         margintop="mt-3"

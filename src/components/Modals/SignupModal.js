@@ -1,15 +1,15 @@
 import React from "react";
-import opendoor from "../assets//open-door-home-with-key-keyhole-new-housing-concept.png";
-import SignupForm from "../components/SignupForm/SignupForm";
+import opendoor from "../../assets//open-door-home-with-key-keyhole-new-housing-concept.png";
+import SignupForm from "../SignupForm/SignupForm";
 
-const SigninModal = (props) => {
+const SignupModal = (props) => {
   return (
     <React.Fragment>
       <div
         onClick={props.dissmissModal}
         className="fixed w-full h-screen bg-black/30"
       ></div>
-      <div className=" flex rounded-xl fixed bg-white w-ninety md:w-60 left-five top-five md:top-ten md:left-twenty  h-2/3 md:h-4/5 ">
+      <div className=" flex rounded-xl fixed bg-white w-ninety md:w-sixty left-five top-five md:top-ten md:left-twenty z-10  h-2/3 md:h-4/5 ">
         <div className="hidden lg:flex w-1/2 ">
           <img className="h-full w-full" src={opendoor} alt="" />
         </div>
@@ -39,4 +39,4 @@ const SigninModal = (props) => {
   );
 };
 
-export default SigninModal;
+export default SignupModal;

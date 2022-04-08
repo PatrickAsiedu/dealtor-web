@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import sectionimage from "../assets//Group 1238.png";
-import SigninModal from "../components/SigninModal";
+import SignupModal from "../components/Modals/SignupModal";
 
 const Home = () => {
   const [showSigninModal, setShowSigninModal] = useState(null);
@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <React.Fragment>
       {showSigninModal && (
-        <SigninModal dismissModal={dissmissmodalHandler}></SigninModal>
+        <SignupModal dismissModal={dissmissmodalHandler}></SignupModal>
       )}
       <div className=" background-image ">
         <div className=" bg-white/20 backdrop-blur h-103px py-7 ">
