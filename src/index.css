@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background-image {
+  background-image: url('./assets/Mask\ Group\ 1.png');
+  /* background-size: cover; */
+
+
+}
+.section-bg-image {
+  background-image: url('./assets/Group\ 1238.png');
+}
+  
+/* 
+.template-bg-image{
+  background-image: linear-gradient(rgba(0,35,31,1)),url('./assets/open-door.png');
+  background-size: cover;
+
+} */
+/* .template-bg-image {
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+  url('./assets/open-door.png');
+
+} */
+
+.template-bg-image {
+  background: linear-gradient(rgba(84, 108, 105, 0.5), rgba(0, 35, 31, 0.5)),
+    url('./assets/open-door.png');
+
+
+
+
+}
