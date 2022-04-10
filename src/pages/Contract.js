@@ -9,7 +9,7 @@ const Contract = () => {
       <Header></Header>
 
       <div className="md:px-64 2xl:px-96">
-        <div className="pt-12 px-8 md:px-20 mt-28  w-full bg-grey">
+        <div className="pt-12 px-8 md:px-20 mt-28  w-full bg-black">
           <div className="  flex items-center justify-between">
             <h1 className="font-bold">Contract</h1>
             <button className="rounded-5px bg-primary py-14px px-9 text-white">
