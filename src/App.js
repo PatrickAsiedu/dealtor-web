@@ -9,8 +9,8 @@ import Home from "./pages/Home";
 function App() {
   return (
     <React.Fragment>
-      {/* <Home></Home> */}
-      <Contract></Contract>
+      <Home></Home>
+      {/* <Contract></Contract> */}
       {/* <ContractTemplates></ContractTemplates> */}
       {/* <Profile></Profile> */}
     </React.Fragment>
