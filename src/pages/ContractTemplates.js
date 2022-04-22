@@ -1,6 +1,7 @@
 import React from "react";
 import NotificatinModal from "../components/Modals/NotificationModal";
 import Header from "../components/Layout/Header";
+import ContractTemplate from "../components/Template/ContractTemplate";
 
 const ContractTemplates = () => {
   return (
@@ -21,104 +22,20 @@ const ContractTemplates = () => {
         </div>
         <p className="text-black mt-4 text-xs ">3206 Templates</p>
         <div className="2xl:grid grid-cols-7 gap-10">
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div>
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>{" "}
-          <div className="mb-7">
-            <div className="mt-4 bg-primary h-31px w-163px text-white text-xs pl-3 py-2">
-              {" "}
-              Classic
-            </div>
-            <div className="h-52 w-163px border mt-1"></div>
-          </div>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
+          <ContractTemplate></ContractTemplate>
         </div>
       </div>
     </React.Fragment>

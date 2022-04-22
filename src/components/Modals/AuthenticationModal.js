@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+
 import opendoor from "../../assets//open-door-home-with-key-keyhole-new-housing-concept.png";
 import SignupForm from "../SignupForm/SignupForm";
+import SigninForm from "../SigninForm/SigninForm";
 
-const SignupModal = (props) => {
+const AuthenticationModal = (props) => {
+  const [dissmissButtonClicked, setDissmissButtonClicked] = useState(null);
+  const [backdropClicked, setBackdropClicked] = useState(false);
+
+  const backdropClickedHandler = () => {
+    setBackdropClicked(true);
+    props.onDismmissHandler(backdropClicked);
+  };
+
+  const dissmissButtonClickedHandler = () => {
+    setDissmissButtonClicked(true);
+    props.onDismmissHandler(dissmissButtonClicked);
+  };
+
   return (
     <React.Fragment>
       <div
-        onClick={props.dissmissModal}
-        className="fixed w-full h-screen bg-black/30"
+        onClick={backdropClickedHandler}
+        className="fixed w-full h-screen bg-black/30 z-10"
       ></div>
-      <div className=" flex rounded-xl fixed bg-white w-ninety md:w-sixty left-five top-five md:top-ten md:left-twenty z-10  h-2/3 md:h-4/5 ">
+      <div className=" flex rounded-xl fixed bg-white w-ninety md:w-sixty left-five top-five md:top-ten md:left-twenty  md:h-4/5 z-20 ">
         <div className="hidden lg:flex w-1/2 ">
           <img className="h-full w-full" src={opendoor} alt="" />
         </div>
         <div className="w-full relative flex-col px-12 lg:w-1/2">
           <button
-            onClick={props.dissmissModal}
+            onClick={dissmissButtonClickedHandler}
             className="absolute top-8 right-8"
           >
             <svg
@@ -32,11 +47,12 @@ const SignupModal = (props) => {
               />
             </svg>
           </button>
-          <SignupForm></SignupForm>
+          {props.showSignupForm && <SignupForm></SignupForm>}
+          {props.showSigninForm && <SigninForm></SigninForm>}
         </div>
       </div>
     </React.Fragment>
   );
 };
 
-export default SignupModal;
+export default AuthenticationModal;

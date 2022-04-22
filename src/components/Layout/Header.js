@@ -4,7 +4,7 @@ import profilepic from "../../assets//pexels-pixabay-220453.jpg";
 const Header = () => {
   return (
     <React.Fragment>
-      <div className="fixed w-screen h-screen  bg-black/30"></div>
+      {/* <div className="fixed w-screen h-screen  bg-black/30"></div> */}
       <header className=" bg-grey py-8">
         <div className="flex items-center justify-between container mx-auto px-8 ">
           <div className="flex items-center">

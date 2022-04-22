@@ -1,28 +1,46 @@
 import React, { useState } from "react";
 
 import sectionimage from "../assets//Group 1238.png";
-import SignupModal from "../components/Modals/SignupModal";
+import SignupModal from "../components/Modals/AuthenticationModal";
+import { Link } from "react-router-dom";
+import AuthenticationModal from "../components/Modals/AuthenticationModal";
 
 const Home = () => {
-  const [showSigninModal, setShowSigninModal] = useState(null);
+  const [signupClicked, setSignupClicked] = useState(false);
+  const [signinClicked, setSigninClicked] = useState(false);
 
-  const onClickHander = () => {
-    setShowSigninModal(true);
+  const dismmissModalHandler = (dismmissButtonClicked) => {
+    setSignupClicked(false);
+    setSigninClicked(false);
   };
 
-  const dissmissmodalHandler = () => {
-    setShowSigninModal(false);
+  const onSignupClickHandler = () => {
+    setSignupClicked(true);
   };
+
+  const onSigninClickHandler = () => {
+    setSigninClicked(true);
+  };
+
+  let ShowAuthenticationModal = false;
+
+  if (signupClicked || signinClicked) {
+    ShowAuthenticationModal = true;
+  }
 
   return (
     <React.Fragment>
-      {showSigninModal && (
-        <SignupModal dismissModal={dissmissmodalHandler}></SignupModal>
+      {ShowAuthenticationModal && (
+        <AuthenticationModal
+          onDismmissHandler={dismmissModalHandler}
+          showSigninForm={signinClicked}
+          showSignupForm={signupClicked}
+        ></AuthenticationModal>
       )}
       <div className=" background-image ">
         <div className=" bg-white/20 backdrop-blur h-103px py-7 ">
           <div className="flex items-center justify-between container mx-auto px-8 md:px-14 lg:px-24 w-full">
-            <div className="flex items-center">
+            <Link to="/Home" className="flex items-center">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +60,7 @@ const Home = () => {
               <span className=" ml-2 text-2xl font-semibold text-logotext">
                 RENPATHY
               </span>
-            </div>
+            </Link>
 
             <div className="md:hidden">
               <svg
@@ -60,11 +78,14 @@ const Home = () => {
             </div>
 
             <div className="hidden md:flex space-x-7">
-              <button className="border border-primary rounded-5px  text-primary font-semibold text-xs py-14px px-30px">
+              <button
+                onClick={onSigninClickHandler}
+                className="border border-primary rounded-5px  text-primary font-semibold text-xs py-14px px-30px"
+              >
                 Sing In
               </button>
               <button
-                onClick={onClickHander}
+                onClick={onSignupClickHandler}
                 className="border border-primary rounded-5px bg-primary text-white font-semibold text-xs py-14px px-30px"
               >
                 Sign Up
@@ -84,9 +105,11 @@ const Home = () => {
               Contract signing, simplified
             </p>
             <div className=" flex  justify-center md:justify-start ">
-              <button className=" mt-6 mb-4 2xl:mb-40 rounded-5px bg-primary py-14px px-12 text-xs font-bold text-white">
-                Get Started
-              </button>
+              <Link to="/ContractTemplates">
+                <button className=" mt-6 mb-4 2xl:mb-40 rounded-5px bg-primary py-14px px-12 text-xs font-bold text-white">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -112,7 +135,7 @@ const Home = () => {
             <li className="flex py-9 bg-grey pl-34px">
               <span className="py-2 px-14px bg-deepblue text-white mr-3">
                 2
-              </span>{" "}
+              </span>
               Select preferred contract template
             </li>
             <li className="flex py-9 bg-grey pl-34px">

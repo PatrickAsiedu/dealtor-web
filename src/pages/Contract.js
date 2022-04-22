@@ -5,7 +5,7 @@ import ContractModal from "../components/Modals/ContractModal";
 const Contract = () => {
   return (
     <React.Fragment>
-      <ContractModal></ContractModal>
+      {/* <ContractModal></ContractModal> */}
       <Header></Header>
 
       <div className="md:px-64 2xl:px-96">
