@@ -12,7 +12,7 @@ const NotificatinModal = () => {
         <Notifcationtile />
 
         <div className="ml-8 flex justify-between py-9 pr-28">
-          <a className="text-primary font-bold text-sm" href="">
+          <a className="text-primary font-bold text-sm" href="/all">
             View all Notifications
           </a>
           <button className="text-logotext font-bold text-sm">

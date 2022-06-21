@@ -1,5 +1,5 @@
 import React from "react";
-import NotificatinModal from "../components/Modals/NotificationModal";
+// import NotificatinModal from "../components/Modals/NotificationModal";
 import Header from "../components/Layout/Header";
 import ContractTemplate from "../components/Template/ContractTemplate";
 

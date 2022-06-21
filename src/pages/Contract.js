@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Layout/Header";
-import ContractModal from "../components/Modals/ContractModal";
+// import ContractModal from "../components/Modals/ContractModal";
 
 const Contract = () => {
   return (
