@@ -1,13 +1,47 @@
-import React, { useState } from "react";
+import React, { useState,  useEffect } from "react";
 
-import sectionimage from "../assets//Group 1238.png";
-import SignupModal from "../components/Modals/AuthenticationModal";
+// import SignupModal from "../components/Modals/AuthenticationModal";
 import { Link } from "react-router-dom";
 import AuthenticationModal from "../components/Modals/AuthenticationModal";
+
+import sectionimage from "../assets/group_image.png";
+import boxImage from '../assets/box_image.jpeg'
+import birdsImage from '../assets/birds.jpeg'
+import ducksImage from '../assets/ducks.jpeg'
+import woodenAnimalImage from '../assets/wooden-animals.jpeg'
+
+const images = [
+  {id:1, name: sectionimage},
+  {id:2, name: boxImage},
+  {id:3, name: birdsImage},
+  {id:4, name: ducksImage},
+  {id:5, name: woodenAnimalImage}
+]
+
+
+const RenderItems = ({name, id, current }) => (
+  <li className="flex py-2 bg-grey pl-20px ">
+      <span className={`py-2 px-14px ${current === id ? 'bg-primary' : 'bg-deepblue'} text-white mr-3`}>{id}</span>{" "}
+      {name}
+  </li>
+)
 
 const Home = () => {
   const [signupClicked, setSignupClicked] = useState(false);
   const [signinClicked, setSigninClicked] = useState(false);
+
+  // const currentCarouselImage =  useRef(0)
+  const [currentCarouselImage, setCurrentCarouselImage] = useState(images[0]);
+
+  useEffect(() => {
+    const carousel = setInterval(()=>{
+      const indexCurrent = images.indexOf(currentCarouselImage)
+      setCurrentCarouselImage(() => images[(indexCurrent+1)%images.length])
+    }, 3000)
+    
+    return () => clearInterval(carousel);
+  }, [currentCarouselImage])
+  
 
   const dismmissModalHandler = (dismmissButtonClicked) => {
     setSignupClicked(false);
@@ -27,6 +61,8 @@ const Home = () => {
   if (signupClicked || signinClicked) {
     ShowAuthenticationModal = true;
   }
+
+  console.log(currentCarouselImage)
 
   return (
     <React.Fragment>
@@ -123,40 +159,21 @@ const Home = () => {
       </div>
 
       <div className=" mt-24 grid grid-cols-1 md:grid-cols-2 container mx-auto px-8 md:px-14 lg:px-24 md:space-x-9 ">
+        {/* implement carousel of images here */}
         <div>
-          <img className=" object-fit" src={sectionimage} alt="logo" />
+          
+          <img className=" object-fit" src={currentCarouselImage.name} alt={currentCarouselImage.name.toString()} />
         </div>
+
         <div className>
           <ol className=" text-sm space-y-3">
-            <li className="py-9 bg-grey pl-34px ">
-              <span className="py-2 px-14px bg-primary text-white mr-3">1</span>{" "}
-              Create an Account
-            </li>
-            <li className="flex py-9 bg-grey pl-34px">
-              <span className="py-2 px-14px bg-deepblue text-white mr-3">
-                2
-              </span>
-              Select preferred contract template
-            </li>
-            <li className="flex py-9 bg-grey pl-34px">
-              <span className="py-2 px-14px bg-deepblue text-white mr-3">
-                3
-              </span>
-              Complete with your contracting details and agree to terms
-            </li>
-            <li className="py-9 bg-grey pl-34px flex">
-              <span className="py-2 px-14px bg-deepblue text-white mr-3">
-                4
-              </span>
-              Submit to your tenant or landlord to review and agree to terms
-            </li>
-            <li className="py-9 bg-grey pl-34px flex">
-              <span className="py-2 px-14px bg-deepblue text-white mr-3">
-                5
-              </span>
-              Completed agreement is available to both parties on Renpathy for
-              saving
-            </li>
+
+            <RenderItems id={1} current={currentCarouselImage.id} name='Create an Account' />
+            <RenderItems id={2} current={currentCarouselImage.id} name='Select preferred contract template' />
+            <RenderItems id={3} current={currentCarouselImage.id} name='Complete with your contracting details and agree to terms' />
+            <RenderItems id={4} current={currentCarouselImage.id} name='Submit to your tenant or landlord to review and agree to terms' />
+            <RenderItems id={5} current={currentCarouselImage.id} name='Completed agreement is available to both parties on Renpathy for saving' />
+
           </ol>
         </div>
       </div>

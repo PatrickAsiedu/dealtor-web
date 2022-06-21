@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Layout/Header";
 import profilepic from "../assets/pexels-pixabay-220453.jpg";
-import Input from "../components/UI/Input.js";
+// import Input from "../components/UI/Input.js";
 
 const Profile = () => {
   return (
