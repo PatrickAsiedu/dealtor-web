@@ -19,8 +19,8 @@ const images = [
 ]
 
 
-const RenderItems = ({name, id, current }) => (
-  <li className="flex py-2 bg-grey pl-20px ">
+const RenderItems = ({name, id, current, onItemClickHandler }) => (
+  <li className="flex py-2 bg-grey pl-20px " onClick={()=>onItemClickHandler(id)}>
       <span className={`py-2 px-14px ${current === id ? 'bg-primary' : 'bg-deepblue'} text-white mr-3`}>{id}</span>{" "}
       {name}
   </li>
@@ -63,6 +63,11 @@ const Home = () => {
   }
 
   console.log(currentCarouselImage)
+  const onItemClickHandler =(id) => {
+    console.log('item with id clikce: ', id)
+    setCurrentCarouselImage(images[id-1])
+
+  }
 
   return (
     <React.Fragment>
@@ -168,11 +173,11 @@ const Home = () => {
         <div className>
           <ol className=" text-sm space-y-3">
 
-            <RenderItems id={1} current={currentCarouselImage.id} name='Create an Account' />
-            <RenderItems id={2} current={currentCarouselImage.id} name='Select preferred contract template' />
-            <RenderItems id={3} current={currentCarouselImage.id} name='Complete with your contracting details and agree to terms' />
-            <RenderItems id={4} current={currentCarouselImage.id} name='Submit to your tenant or landlord to review and agree to terms' />
-            <RenderItems id={5} current={currentCarouselImage.id} name='Completed agreement is available to both parties on Renpathy for saving' />
+            <RenderItems id={1} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Create an Account' />
+            <RenderItems id={2} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Select preferred contract template' />
+            <RenderItems id={3} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Complete with your contracting details and agree to terms' />
+            <RenderItems id={4} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Submit to your tenant or landlord to review and agree to terms' />
+            <RenderItems id={5} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Completed agreement is available to both parties on Renpathy for saving' />
 
           </ol>
         </div>
