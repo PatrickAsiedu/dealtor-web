@@ -27,8 +27,11 @@
 .template-bg-image {
   background: linear-gradient(rgba(84, 108, 105, 0.5), rgba(0, 35, 31, 0.5)),
     url('./assets/open-door.png');
-
+    background-size: cover;
+    
+   
 
 
 
 }
+

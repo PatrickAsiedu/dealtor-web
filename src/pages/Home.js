@@ -1,30 +1,41 @@
-import React, { useState,  useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // import SignupModal from "../components/Modals/AuthenticationModal";
 import { Link } from "react-router-dom";
 import AuthenticationModal from "../components/Modals/AuthenticationModal";
 
 import sectionimage from "../assets/group_image.png";
-import boxImage from '../assets/box_image.jpeg'
-import birdsImage from '../assets/birds.jpeg'
-import ducksImage from '../assets/ducks.jpeg'
-import woodenAnimalImage from '../assets/wooden-animals.jpeg'
+import boxImage from "../assets/box_image.jpeg";
+import birdsImage from "../assets/birds.jpeg";
+import ducksImage from "../assets/ducks.jpeg";
+import woodenAnimalImage from "../assets/wooden-animals.jpeg";
 
 const images = [
-  {id:1, name: sectionimage},
-  {id:2, name: boxImage},
-  {id:3, name: birdsImage},
-  {id:4, name: ducksImage},
-  {id:5, name: woodenAnimalImage}
-]
+  { id: 1, name: sectionimage },
+  { id: 2, name: boxImage },
+  { id: 3, name: birdsImage },
+  { id: 4, name: ducksImage },
+  { id: 5, name: woodenAnimalImage },
+];
 
-
-const RenderItems = ({name, id, current, onItemClickHandler }) => (
-  <li className="flex py-2 bg-grey pl-20px " onClick={()=>onItemClickHandler(id)}>
-      <span className={`py-2 px-14px ${current === id ? 'bg-primary' : 'bg-deepblue'} text-white mr-3`}>{id}</span>{" "}
+const RenderItems = ({ name, id, current, onItemClickHandler }) => (
+  <li
+    className="flex py-2 bg-grey px-4 lg:pl-8  md:h-20 lg:h-14 "
+    onClick={() => onItemClickHandler(id)}
+  >
+    <span
+      className={`h-8 w-8 flex justify-center items-center my-auto ${
+        current === id ? "bg-primary" : "bg-deepblue"
+      } text-white mr-3`}
+    >
+      {id}
+    </span>
+    <span className="w-[450px] leading-6 flex items-center text-deepblue">
+      {" "}
       {name}
+    </span>
   </li>
-)
+);
 
 const Home = () => {
   const [signupClicked, setSignupClicked] = useState(false);
@@ -34,14 +45,13 @@ const Home = () => {
   const [currentCarouselImage, setCurrentCarouselImage] = useState(images[0]);
 
   useEffect(() => {
-    const carousel = setInterval(()=>{
-      const indexCurrent = images.indexOf(currentCarouselImage)
-      setCurrentCarouselImage(() => images[(indexCurrent+1)%images.length])
-    }, 3000)
-    
+    const carousel = setInterval(() => {
+      const indexCurrent = images.indexOf(currentCarouselImage);
+      setCurrentCarouselImage(() => images[(indexCurrent + 1) % images.length]);
+    }, 3000);
+
     return () => clearInterval(carousel);
-  }, [currentCarouselImage])
-  
+  }, [currentCarouselImage]);
 
   const dismmissModalHandler = (dismmissButtonClicked) => {
     setSignupClicked(false);
@@ -62,12 +72,11 @@ const Home = () => {
     ShowAuthenticationModal = true;
   }
 
-  console.log(currentCarouselImage)
-  const onItemClickHandler =(id) => {
-    console.log('item with id clikce: ', id)
-    setCurrentCarouselImage(images[id-1])
-
-  }
+  console.log(currentCarouselImage);
+  const onItemClickHandler = (id) => {
+    console.log("item with id clikce: ", id);
+    setCurrentCarouselImage(images[id - 1]);
+  };
 
   return (
     <React.Fragment>
@@ -80,8 +89,8 @@ const Home = () => {
       )}
       <div className=" background-image ">
         <div className=" bg-white/20 backdrop-blur h-103px py-7 ">
-          <div className="flex items-center justify-between container mx-auto px-8 md:px-14 lg:px-24 w-full">
-            <Link to="/Home" className="flex items-center">
+          <header className="flex items-center justify-between container mx-auto px-8 md:px-14 lg:px-24 w-full">
+            <Link to="/" className="flex items-center">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -132,12 +141,12 @@ const Home = () => {
                 Sign Up
               </button>
             </div>
-          </div>
+          </header>
         </div>
 
-        <div className=" container mx-auto px-8 md:px-14 lg:px-24 w-full ">
+        <section className=" container mx-auto px-8 md:px-14 lg:px-24 w-full ">
           <div className=" md:items-start">
-            <div className="  mt-8  md:w-96 xl:w-650px">
+            <div className="  mt-8  md:w-full lg:w-650px">
               <h1 className="font-semibold leading-10 text-center text-4xl md:text-5xl lg:text-6xl md:text-left">
                 Edit, send &amp; sign PDF documents online for free.
               </h1>
@@ -147,41 +156,68 @@ const Home = () => {
             </p>
             <div className=" flex  justify-center md:justify-start ">
               <Link to="/ContractTemplates">
-                <button className=" mt-6 mb-4 2xl:mb-40 rounded-5px bg-primary py-14px px-12 text-xs font-bold text-white">
+                <button className=" mt-6 mb-20  rounded-5px bg-primary py-14px px-12 text-xs font-bold text-white">
                   Get Started
                 </button>
               </Link>
             </div>
           </div>
-        </div>
+        </section>
       </div>
 
-      <div className=" bg-grey text-center py-12">
+      <section className=" bg-grey text-center py-12">
         <div className=" container mx-auto px-8 md:px-14 lg:px-24 w-full text-base md:text-lg lg:text-xl ">
           Renpathy streamlines contract signing, distribution and form
           completion
         </div>
-      </div>
+      </section>
 
-      <div className=" mt-24 grid grid-cols-1 md:grid-cols-2 container mx-auto px-8 md:px-14 lg:px-24 md:space-x-9 ">
+      <section className=" mt-24 grid grid-cols-1 md:grid-cols-2 container mx-auto px-8 md:px-14 lg:px-24 md:space-x-9 ">
         {/* implement carousel of images here */}
         <div>
-          
-          <img className=" object-fit" src={currentCarouselImage.name} alt={currentCarouselImage.name.toString()} />
+          <img
+            className=" object-fit"
+            src={currentCarouselImage.name}
+            alt={currentCarouselImage.name.toString()}
+          />
         </div>
 
-        <div className>
+        <div className="mt-6 md:mt-0">
           <ol className=" text-sm space-y-3">
-
-            <RenderItems id={1} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Create an Account' />
-            <RenderItems id={2} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Select preferred contract template' />
-            <RenderItems id={3} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Complete with your contracting details and agree to terms' />
-            <RenderItems id={4} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Submit to your tenant or landlord to review and agree to terms' />
-            <RenderItems id={5} current={currentCarouselImage.id} onItemClickHandler={onItemClickHandler} name='Completed agreement is available to both parties on Renpathy for saving' />
-
+            <RenderItems
+              id={1}
+              current={currentCarouselImage.id}
+              onItemClickHandler={onItemClickHandler}
+              name="Create an Account"
+            />
+            <RenderItems
+              id={2}
+              current={currentCarouselImage.id}
+              onItemClickHandler={onItemClickHandler}
+              name="Select preferred contract template"
+            />
+            <RenderItems
+              id={3}
+              current={currentCarouselImage.id}
+              onItemClickHandler={onItemClickHandler}
+              name="Complete with your contracting details and agree to terms"
+            />
+            <RenderItems
+              id={4}
+              current={currentCarouselImage.id}
+              onItemClickHandler={onItemClickHandler}
+              name="Submit to your tenant or landlord to review and agree to terms"
+            />
+            <RenderItems
+              id={5}
+              current={currentCarouselImage.id}
+              onItemClickHandler={onItemClickHandler}
+              name="Completed agreement is available to both parties on Renpathy for saving"
+            />
           </ol>
         </div>
-      </div>
+      </section>
+      <footer className="pt-[200px]"></footer>
     </React.Fragment>
   );
 };

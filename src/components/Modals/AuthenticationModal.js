@@ -24,11 +24,11 @@ const AuthenticationModal = (props) => {
         onClick={backdropClickedHandler}
         className="fixed w-full h-screen bg-black/30 z-10"
       ></div>
-      <div className=" flex rounded-xl fixed bg-white w-ninety md:w-sixty left-five top-five md:top-ten md:left-twenty  md:h-4/5 z-20 ">
+      <div className=" flex rounded-xl absolute bg-white w-ninety md:w-sixty left-five top-[8%] md:top-ten md:left-twenty   z-20 lg:w-[80%] lg:left-[10%] xl:w-[60%] xl:left-[20%]">
         <div className="hidden lg:flex w-1/2 ">
           <img className="h-full w-full" src={opendoor} alt="" />
         </div>
-        <div className="w-full relative flex-col px-12 lg:w-1/2">
+        <div className="w-full relative flex-col px-8 lg:px-12 lg:w-1/2">
           <button
             onClick={dissmissButtonClickedHandler}
             className="absolute top-8 right-8"

@@ -10,6 +10,7 @@ module.exports = {
         primary: "#005048",
         logotext: "#000E0D",
         grey: "#F5F5F5",
+        greytext: "#707070",
         deepblue: "#000F44",
         tfill: "#00231F",
       },

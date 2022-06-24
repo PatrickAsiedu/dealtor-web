@@ -1,5 +1,6 @@
 import React from "react";
 import profilepic from "../../assets//pexels-pixabay-220453.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       {/* <div className="fixed w-screen h-screen  bg-black/30"></div> */}
       <header className=" bg-grey py-8">
         <div className="flex items-center justify-between container mx-auto px-8 ">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +28,9 @@ const Header = () => {
             <span className=" ml-2 text-2xl font-semibold text-logotext">
               RENPATHY
             </span>
-          </div>
+          </Link>
 
-          <div className="hidden lg:flex md:relative">
+          <div className="hidden md:flex md:relative">
             <svg
               className="absolute top-3 left-3 "
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +68,7 @@ const Header = () => {
             </svg>
             <input
               placeholder="Search for contract templates"
-              className=" pl-12 h-12 w-888px bg-white "
+              className=" pl-12 h-12 md:w-80 lg:w-[420px] 2xl:w-888px bg-white outline-primary "
             ></input>
           </div>
           <div className="md:hidden">
@@ -84,7 +85,7 @@ const Header = () => {
               />
             </svg>
           </div>
-          <div className=" flex items-center">
+          <div className="hidden md:flex items-center">
             <div className="relative mr-8">
               <div className=" text-center absolute right-0 top-0 bg-yellow-500 h-2 w-2 rounded-full text-white text-tiny">
                 7

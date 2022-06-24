@@ -8,7 +8,7 @@ const Contract = () => {
       {/* <ContractModal></ContractModal> */}
       <Header></Header>
 
-      <div className="md:px-64 2xl:px-96">
+      <div className=" md:px-8 lg:px-24 xl:px-64 2xl:px-96">
         <div className="pt-12 px-8 md:px-20 mt-28  w-full bg-grey">
           <div className="  flex items-center justify-between">
             <h1 className="font-bold">Contract</h1>
@@ -18,7 +18,7 @@ const Contract = () => {
             </button>
           </div>
           <hr className="mt-8 bg-black mb-8" />
-          <div className=" leading-10">
+          <main className=" leading-10">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam
             doloremque, in sed aliquid est aut mollitia facilis vel dolores,
             debitis quos facere, possimus at? Reprehenderit quasi ratione quia
@@ -71,9 +71,10 @@ const Contract = () => {
             sit, amet consectetur adipisicing elit. Veniam doloremque, in sed
             aliquid est aut mollitia facilis vel dolores, debitis quos facere,
             possimus at? Reprehenderit quasi ratione quia quaerat tempore.
-          </div>
+          </main>
         </div>
       </div>
+      <footer className="pt-[200px]"></footer>
     </React.Fragment>
   );
 };
