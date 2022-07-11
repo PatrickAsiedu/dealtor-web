@@ -49,9 +49,9 @@ const Header = () => {
                   d="M21.715,13.107A8.607,8.607,0,1,1,13.107,4.5,8.607,8.607,0,0,1,21.715,13.107Z"
                   fill="none"
                   stroke="#d8d8d8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
                 <path
                   id="Path_213"
@@ -60,9 +60,9 @@ const Header = () => {
                   transform="translate(-5.789 -5.789)"
                   fill="none"
                   stroke="#d8d8d8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                 />
               </g>
             </svg>

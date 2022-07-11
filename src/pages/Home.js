@@ -72,9 +72,9 @@ const Home = () => {
     ShowAuthenticationModal = true;
   }
 
-  console.log(currentCarouselImage);
+  // console.log(currentCarouselImage);
   const onItemClickHandler = (id) => {
-    console.log("item with id clikce: ", id);
+    // console.log("item with id cliked: ", id);
     setCurrentCarouselImage(images[id - 1]);
   };
 
@@ -132,7 +132,7 @@ const Home = () => {
                 onClick={onSigninClickHandler}
                 className="border border-primary rounded-5px  text-primary font-semibold text-xs py-14px px-30px"
               >
-                Sing In
+                Sign In
               </button>
               <button
                 onClick={onSignupClickHandler}

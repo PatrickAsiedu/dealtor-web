@@ -23,7 +23,7 @@ const Profile = () => {
                   data-name="Ellipse 9"
                   fill="#de8108"
                   stroke="#fff"
-                  stroke-width="1"
+                  strokeWidth="1"
                 >
                   <circle cx="25.5" cy="25.5" r="25.5" stroke="none" />
                   <circle cx="25.5" cy="25.5" r="25" fill="none" />
@@ -35,9 +35,9 @@ const Profile = () => {
                   transform="translate(12.171 11.914)"
                   fill="none"
                   stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
                 />
               </svg>
             </button>

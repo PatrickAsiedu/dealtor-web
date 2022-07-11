@@ -11,12 +11,9 @@ function App() {
   return (
     <React.Fragment>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/Contract" element={<Contract />}></Route>
-        <Route
-          path="ContractTemplates"
-          element={<ContractTemplates></ContractTemplates>}
-        ></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/Contract" element={<Contract />} />
+        <Route path="ContractTemplates" element={<ContractTemplates />} />
 
         {/* <Profile></Profile> */}
       </Routes>

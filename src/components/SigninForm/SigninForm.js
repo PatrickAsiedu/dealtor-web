@@ -81,7 +81,7 @@ const SigninForm = () => {
         <div className="mt-6 text-xs text-center pb-14">
           {" "}
           <span className="text-logotext">Already Have an account?</span>{" "}
-          <Link className="font-bold ml-1"> Sign Up</Link>
+          {/* <Link className="font-bold ml-1"> Sign Up</Link> */}
         </div>
       </form>
     </React.Fragment>

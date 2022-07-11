@@ -111,7 +111,7 @@ const SignupForm = () => {
         <div className="mt-8 text-xs text-center pb-14">
           {" "}
           <span className="text-logotext">Already Have an account?</span>{" "}
-          <Link className="font-bold ml-1"> Sign In</Link>
+          {/* <Link  className="font-bold ml-1"> Sign In</Link> */}
         </div>
       </form>
     </React.Fragment>
