@@ -5,10 +5,7 @@ import { Link } from "react-router-dom";
 import AuthenticationModal from "../components/Modals/AuthenticationModal";
 
 import sectionimage from "../assets/group_image.png";
-import boxImage from "../assets/box_image.jpeg";
-import birdsImage from "../assets/birds.jpeg";
-import ducksImage from "../assets/ducks.jpeg";
-import woodenAnimalImage from "../assets/wooden-animals.jpeg";
+
 
 const images = [
   { id: 1, name: sectionimage },
