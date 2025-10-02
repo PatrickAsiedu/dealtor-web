@@ -12,10 +12,10 @@ import woodenAnimalImage from "../assets/wooden-animals.jpeg";
 
 const images = [
   { id: 1, name: sectionimage },
-  { id: 2, name: boxImage },
-  { id: 3, name: birdsImage },
-  { id: 4, name: ducksImage },
-  { id: 5, name: woodenAnimalImage },
+  { id: 2, name: sectionimage },
+  { id: 3, name: sectionimage},
+  { id: 4, name: sectionimage},
+  { id: 5, name: sectionimage},
 ];
 
 const RenderItems = ({ name, id, current, onItemClickHandler }) => (
